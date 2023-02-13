@@ -24,7 +24,8 @@
     "import/no-unresolved": "off",
     "no-shadow": "off",
     "quotes": "off",
-    "comma-dangle": "off"
+    "comma-dangle": "off",
+    "object-curly-newline": "off"
   },
   "ignorePatterns": ["dist/", "build/"]
 }
