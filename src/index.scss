@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,400&display=swap");
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  font-weight: 500;
+}
+
+header {
+  height: 9rem;
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+
+    .nav {
+      .list {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+
+        @media (max-width: 550px) {
+          gap: 1rem;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+.header-title {
+  font-size: 4rem;
+}
+
+.main {
+  padding: 2rem 0;
+}
+
+.row {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.calculator-page {
+  display: flex;
+  gap: 2rem;
+
+  .text-container {
+    flex: 1;
+  }
+
+  .calculator {
+    flex: 1;
+
+    .result {
+      background-color: #858694;
+      padding: 1rem;
+    }
+
+    .body {
+      height: 40rem;
+      display: flex;
+
+      .numbers {
+        flex: 1;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 2px;
+        background-color: #fff;
+
+        .num {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #e0e0e0;
+        }
+
+        .zero {
+          grid-column: 1 / span 2;
+        }
+      }
+
+      .symbols {
+        flex: 0 0 20%;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+
+        .symbol {
+          flex: 1;
+          background-color: #f5913e;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  border-top: 1px solid #ddd;
+  padding-top: 2rem;
+}
+
+@media (max-width: 800px) {
+  .calculator-page {
+    flex-direction: column;
+  }
+
+  .header-title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .calculator-page {
+    flex-direction: column;
+  }
+
+  .header-title {
+    font-size: 2.2rem;
+  }
+}
