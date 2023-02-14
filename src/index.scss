@@ -21,6 +21,7 @@ body {
 
 header {
   height: 9rem;
+
   .header-container {
     display: flex;
     justify-content: space-between;
@@ -78,7 +79,6 @@ header {
 
       .numbers {
         flex: 1;
-
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(5, 1fr);
