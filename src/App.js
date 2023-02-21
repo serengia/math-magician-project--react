@@ -1,27 +1,21 @@
-import Calculator from "./components/Calculator";
+import { Route, Routes } from "react-router-dom";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
+import CalculatorPage from "./pages/CalculatorPage";
+import HomePage from "./pages/HomePage";
+import QuotePage from "./pages/QuotePage";
 
 function App() {
   return (
-    <div className="App">
-      <header>
-        <Header />
-      </header>
-      <div className="main">
-        <div className="calculator-page row">
-          <div className="text-container">
-            <h4>Lets do some Math!</h4>
-          </div>
-          <Calculator />
-        </div>
-      </div>
-
-      <footer className="footer">
-        <div className="footer-container row">
-          <h4>Footer</h4>
-        </div>
-      </footer>
-    </div>
+    <>
+      <Header />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/calculator" element={<CalculatorPage />} />
+        <Route path="/quote" element={<QuotePage />} />
+      </Routes>
+      <Footer />
+    </>
   );
 }
 
