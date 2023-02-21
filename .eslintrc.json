@@ -26,7 +26,10 @@
     "quotes": "off",
     "comma-dangle": "off",
     "object-curly-newline": "off",
-    "linebreak-style": "off"
+    "react/jsx-one-expression-per-line": "off",
+    "linebreak-style": "off",
+    "react/prop-types": "off",
+    "no-unneeded-ternary": "off"
   },
   "ignorePatterns": ["dist/", "build/"]
 }
