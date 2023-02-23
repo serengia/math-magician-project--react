@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render quotes correctly 1`] = `
+<div
+  className="math-quote"
+  style={
+    Object {
+      "backgroundColor": "#fff",
+    }
+  }
+>
+  <p
+    className="quote-text"
+  >
+    Test quote
+  </p>
+  <span
+    className="by"
+  >
+    By: 
+    <span
+      className="name"
+    >
+      Mandela
+    </span>
+     
+  </span>
+</div>
+`;
