@@ -1,6 +1,5 @@
 import { render, screen, act } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-// eslint-disable-next-line import/no-extraneous-dependencies
 import renderer from "react-test-renderer";
 
 import Calculator from "./Calculator";
