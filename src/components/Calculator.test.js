@@ -10,7 +10,7 @@ it("renders correctly", () => {
 });
 
 describe("User interactions", () => {
-  test("if the right value is passed upon a click", () => {
+  test("if the correct special key is passed for clearing data", () => {
     // Arrange
     render(<Calculator />);
 
@@ -23,7 +23,97 @@ describe("User interactions", () => {
 
     // Assert
     const outputElement = buttonElement;
-
     expect(outputElement.textContent).toBe("AC");
+  });
+
+  test("if the right special key is passed for equality", () => {
+    render(<Calculator />);
+
+    let buttonElement;
+    act(() => {
+      buttonElement = screen.getByText("=");
+      userEvent.click(buttonElement);
+    });
+
+    const outputElement = buttonElement;
+    expect(outputElement.textContent).toBe("=");
+  });
+
+  test("if the right special key is passed for sign change", () => {
+    render(<Calculator />);
+
+    let buttonElement;
+    act(() => {
+      buttonElement = screen.getByText("+/-");
+      userEvent.click(buttonElement);
+    });
+
+    const outputElement = buttonElement;
+    expect(outputElement.textContent).toBe("+/-");
+  });
+
+  test("if the right operation is passed for addition", () => {
+    render(<Calculator />);
+
+    let buttonElement;
+    act(() => {
+      buttonElement = screen.getByText("+");
+      userEvent.click(buttonElement);
+    });
+
+    const outputElement = buttonElement;
+    expect(outputElement.textContent).toBe("+");
+  });
+
+  test("if the right operation is passed for subtraction", () => {
+    render(<Calculator />);
+
+    let buttonElement;
+    act(() => {
+      buttonElement = screen.getByText("-");
+      userEvent.click(buttonElement);
+    });
+
+    const outputElement = buttonElement;
+    expect(outputElement.textContent).toBe("-");
+  });
+
+  test("if the right operation is passed for multiplication", () => {
+    render(<Calculator />);
+
+    let buttonElement;
+    act(() => {
+      buttonElement = screen.getByText("x");
+      userEvent.click(buttonElement);
+    });
+
+    const outputElement = buttonElement;
+    expect(outputElement.textContent).toBe("x");
+  });
+
+  test("if the right operation is passed for division", () => {
+    render(<Calculator />);
+
+    let buttonElement;
+    act(() => {
+      buttonElement = screen.getByText("÷");
+      userEvent.click(buttonElement);
+    });
+
+    const outputElement = buttonElement;
+    expect(outputElement.textContent).toBe("÷");
+  });
+
+  test("if the right operation is passed for modulo", () => {
+    render(<Calculator />);
+
+    let buttonElement;
+    act(() => {
+      buttonElement = screen.getByText("%");
+      userEvent.click(buttonElement);
+    });
+
+    const outputElement = buttonElement;
+    expect(outputElement.textContent).toBe("%");
   });
 });
