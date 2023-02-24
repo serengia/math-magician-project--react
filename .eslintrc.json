@@ -29,7 +29,8 @@
     "react/jsx-one-expression-per-line": "off",
     "linebreak-style": "off",
     "react/prop-types": "off",
-    "no-unneeded-ternary": "off"
+    "no-unneeded-ternary": "off",
+    "import/no-extraneous-dependencies": "off"
   },
   "ignorePatterns": ["dist/", "build/"]
 }
